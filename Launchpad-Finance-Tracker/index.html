@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Launchpad Finance Pathway Tracker</title>
+  <meta name="description" content="Offline UCAS + Degree Apprenticeship tracker for finance/accounting/maths/econ/stats/data science students." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="app-bg"></div>
+
+  <div class="shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand__logo">LP</div>
+        <div class="brand__text">
+          <div class="brand__title">Launchpad</div>
+          <div class="brand__sub">Finance Pathway Tracker</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__item" href="#/dashboard" data-route="dashboard">
+          <span class="nav__icon">◉</span> Dashboard
+        </a>
+        <a class="nav__item" href="#/ucas" data-route="ucas">
+          <span class="nav__icon">⌁</span> UCAS Tracker
+        </a>
+        <a class="nav__item" href="#/apprenticeships" data-route="apprenticeships">
+          <span class="nav__icon">▦</span> Degree Apprenticeships
+        </a>
+        <a class="nav__item" href="#/personal-statement" data-route="personalStatement">
+          <span class="nav__icon">✎</span> Personal Statement
+        </a>
+        <a class="nav__item" href="#/entry-tests" data-route="entryTests">
+          <span class="nav__icon">✓</span> Entry Tests & Prep
+        </a>
+        <a class="nav__item" href="#/supercurricular" data-route="supercurricular">
+          <span class="nav__icon">⚑</span> Supercurricular Planner
+        </a>
+        <a class="nav__item" href="#/documents" data-route="documents">
+          <span class="nav__icon">⎘</span> Documents & Evidence
+        </a>
+        <a class="nav__item" href="#/resources" data-route="resources">
+          <span class="nav__icon">🔗</span> Links & Resources
+        </a>
+        <a class="nav__item" href="#/glossary" data-route="glossary">
+          <span class="nav__icon">📚</span> Glossary & Ideas
+        </a>
+        <a class="nav__item" href="#/deadlines" data-route="deadlines">
+          <span class="nav__icon">🗓</span> Deadlines
+        </a>
+        <a class="nav__item" href="#/settings" data-route="settings">
+          <span class="nav__icon">⚙</span> Settings & Backup
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <button class="btn btn--ghost w-100" id="toggleSidebarBtn" type="button">
+          Collapse / Expand
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar__left">
+          <button class="btn btn--ghost hide-desktop" id="mobileMenuBtn" type="button">☰</button>
+          <div class="crumbs" id="crumbs">Dashboard</div>
+        </div>
+
+        <div class="topbar__right">
+          <div class="search">
+            <input id="globalSearch" class="input" placeholder="Search everything (courses, companies, notes, links…)" />
+          </div>
+
+          <button class="btn btn--ghost" id="themeToggleBtn" type="button" title="Toggle light/dark">
+            ☾
+          </button>
+
+          <button class="btn btn--primary" id="saveBtn" type="button">
+            Save
+          </button>
+
+          <button class="btn btn--ghost" id="exportBtn" type="button">
+            Export
+          </button>
+
+          <label class="btn btn--ghost file-btn" title="Import backup JSON">
+            Import
+            <input id="importInput" type="file" accept="application/json" />
+          </label>
+
+          <div class="save-indicator" id="saveIndicator">Saved ✓</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <div id="page"></div>
+      </section>
+
+      <footer class="footer">
+        <div>Offline-first • Stored locally on this browser • Use Export for backups</div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
